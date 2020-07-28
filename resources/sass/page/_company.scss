@@ -1,0 +1,124 @@
+#company{
+
+    .frame{
+    margin: 0 auto;
+    max-width: 860px;
+
+    }
+
+    .company_item_title{
+        color: #808080;
+        text-align: center;
+        font-size: 1.2rem;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        padding: 7px;
+        margin: 30px 0 ;
+    }
+
+
+    .title{
+        text-align: center;
+        color: #808080;
+        font-size: 3rem;
+        padding: 4rem 2rem;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .ggmap {
+        position: relative;
+        padding-bottom: 40%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .ggmap iframe,.ggmap object,.ggmap embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .companytable{
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 100%;
+
+        .companytable_head{
+            color: #808080;
+            width: 200px;
+            padding: 10px;
+            border: solid 1px black;
+            font-weight: 100;
+            font-size: 0.9rem;
+            background-color: #DDDDDD;
+        }
+
+        .companytable_data{
+            color: #808080;
+            padding: 10px;
+            font-size: 0.9rem;
+            border: solid 1px black;
+        }
+    }
+
+    .ceo_box {
+        display:flex;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+    }
+
+    .ceo_text {
+        width: 100%;
+        text-align: center;
+
+        .ceo_title{
+            font-size: 20px;
+        }
+    }
+
+    .ceo_name{
+        text-align: center;
+        margin: 0;
+    }
+
+
+    .ceo_pict {
+        width: 100%;
+        text-align: center;
+        min-height: 0%;
+        margin-bottom: 15px;
+
+        img {
+            max-width: 500px;
+            height:auto;
+        }
+    }
+
+    table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th{
+  padding: 10px 0;
+  text-align: center;
+}
+
+table th{
+    padding: 30px 0;
+    text-align: center;
+    width: 200px;
+}
+
+table tr:nth-child(odd){
+  background-color: #eee
+}
+
+
+}

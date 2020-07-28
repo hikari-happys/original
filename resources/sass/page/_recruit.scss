@@ -1,0 +1,126 @@
+#recruit{
+
+    .frame{
+    margin: 0 auto;
+    max-width: 860px;
+
+    }
+
+    .title{
+        text-align: center;
+        color: #808080;
+        font-size: 3rem;
+        padding: 4rem 2rem;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .recruit_item_title{
+        color: #808080;
+        text-align: center;
+        font-size: 1.2rem;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        padding: 7px;
+        margin: 30px 0 ;
+    }
+
+    .tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+
+  .text{
+      font-size: 2.1rem;
+      margin-top: 20px;
+      color: #60c1cc;
+
+
+  }
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content
+{
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
+}
+
+dt{
+  float: left;
+}
+
+dd{
+  margin-left: 200px;
+  padding: 0 0 20px 30px;
+}
+
+.container{
+    margin: 20px;
+    text-align: center;
+}
+
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #5ab4bd;
+  font-size: 2rem;
+  color: #5ab4bd;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn-border:hover {
+  background-color: #5ab4bd;
+  border-color: #5ab4bd;
+  color: #FFF;
+}
+
+}

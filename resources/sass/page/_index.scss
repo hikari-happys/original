@@ -1,0 +1,170 @@
+#top{
+
+    font-family: 'Noto Serif JP', serif;
+
+    .frame{
+    margin: 0 auto;
+    max-width: 860px;
+
+    }
+
+    .fram{
+        width: 100vw;
+        height: 600px;
+        background-image:url('/img/top_back.jpg');
+        background-color:rgba(255,255,255,0.3);
+        background-blend-mode:lighten;
+        background-size: 1455px 600px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .big_title{
+            color: #808080;
+            padding: 100px 0 0 50px;
+            font-size: 8rem;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .caption{
+            font-size: 1.2rem;
+            padding-left: 90px;
+        }
+    }
+
+    .index_item_title{
+        color: #808080;
+        text-align: center;
+        font-size: 1.2rem;
+        border-top: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        padding: 7px;
+        margin: 30px 0 ;
+    }
+
+    .jump_page {
+      position: relative;
+      text-align: center;
+      margin: 10px 0;
+      }
+
+    .jump_page a {/*aタグを画像の真ん中に*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      /*以下装飾*/
+      margin:0;/*余計な隙間を除く*/
+      font-size: 20px;/*文字サイズ*/
+      border: solid white 2px; /*線で囲う*/
+      padding: 7px;/*文字と線の間の余白*/
+      color: white;/*文字色*/
+      text-decoration: none;/*下線を表示させない*/
+      }
+
+    .jump_page a:hover{/*カーソルを当てたとき*/
+      background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+      }
+
+    .jump_img {
+      width: 50%;
+      height: 400;
+      }
+
+
+    .top_title{
+        font-size: 2rem;
+        margin: 20px 0 40px 0;
+        position: relative;
+        padding: 0 55px;
+        text-align: center;
+    }
+
+    .top_title:before, .top_title:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 250px;
+        height: 1px;
+        background-color: black;
+    }
+
+    .top_title:before {
+        left:0;
+    }
+    .top_title:after {
+        right: 0;
+    }
+
+    .box {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .pict {
+      width: 30%;
+      margin-left: 3%;
+    }
+
+    .pict img {
+      width: 100%;
+      height:auto;
+    }
+
+    .box:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .box:nth-child(even) .text {
+      text-align: right;
+    }
+    .box:nth-child(even) .pict {
+      margin-left: 0;
+      margin-right: 3%;
+    }
+
+    .serviceflow_list{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+
+        li{
+          display: inline-block;
+          margin: 30px;
+        }
+
+        .flow_text{
+          margin-top: 15px;
+          margin-left: 10px;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+
+    .flow_item{
+        border: 3px solid #808080;
+        border-radius: 3px;
+        width: 200px;
+        height: 200px;
+    }
+
+
+
+
+
+
+
+
+
+
+}

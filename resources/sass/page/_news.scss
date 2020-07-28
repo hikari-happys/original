@@ -1,0 +1,42 @@
+#news{
+
+    .frame{
+    margin: 0 auto;
+    max-width: 860px;
+
+    }
+
+    .title{
+        text-align: center;
+        color: #808080;
+        font-size: 3rem;
+        padding: 4rem 2rem;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+
+    .news_box {
+      display:flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    .news_pict {
+      width: 30%;
+      margin-left: 3%;
+    }
+
+    .news_top_image {
+      width: 100%;
+      height:auto;
+    }
+
+    .news_text{
+        padding: 0 30px;
+    }
+
+
+}
