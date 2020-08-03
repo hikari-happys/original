@@ -1,4 +1,4 @@
-#contact{
+#mail{
 
     .frame{
     margin: 0 auto;
@@ -6,160 +6,194 @@
 
     }
 
-    .title{
-        text-align: center;
-        color: #808080;
-        font-size: 3rem;
-        padding: 4rem 2rem;
-        padding-bottom: .5em;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 10px;
+  .title{
+      text-align: center;
+      color: #808080;
+      font-size: 3rem;
+      padding: 4rem 2rem;
+      padding-bottom: .5em;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  .recruit_item_title{
+      color: #808080;
+      text-align: center;
+      font-size: 1.2rem;
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+      padding: 7px;
+      margin: 30px 0 ;
+  }
+
+
+  .contact_page_title {
+    margin-top: 50px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+  }
+
+    .contact_page_title:before,
+    .contact_page_title:after {
+      border-top: 1px solid;
+      content: "";
+      flex-grow: 1;
+    }
+    .contact_page_title:before {
+      margin-right: 1rem;
+    }
+    .contact_page_title:after {
+      margin-left: 1rem;
     }
 
-    .Form {
-      margin-top: 80px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 720px;
+    //-------------------入力画面のSCSS----------------------------
+
+  .contact_item{
+    margin-top: 30px;
+
+
+    .contact_text{
+      margin-left: 30px;
+      height:40px;
+      width: 50%;
     }
-    @media screen and (max-width: 480px) {
-      .Form {
-        margin-top: 40px;
-      }
+
+    .contact_title_any, .contact_title_reg{
+      font-size: 1.1rem;
     }
-    .Form-Item {
-      border-top: 1px solid #ddd;
-      padding-top: 24px;
-      padding-bottom: 24px;
-      width: 100%;
-      display: flex;
-      align-items: center;
+
+
+
+    .contact_title_any::after{
+      content: "任意";
+      color: #808080;
+      margin-left: 10px;
+      background: rgb(255, 255, 255);
+      padding: 0px 5px;
+      border-radius: 3px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: rgb(128, 128, 128);
+      border-image: initial;
     }
-    @media screen and (max-width: 480px) {
-      .Form-Item {
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        flex-wrap: wrap;
-      }
+
+    .contact_title_reg::after{
+      content: "必須";
+      color: red;
+      margin-left: 10px;
+      background: rgb(255, 255, 255);
+      padding: 0px 5px;
+      border-radius: 3px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: red;
+      border-image: initial;
     }
-    .Form-Item:nth-child(5) {
-      border-bottom: 1px solid #ddd;
+
+    .text_area{
+      margin-left: 30px;
+      width: 50%;
+      height: 100px;
     }
-    .Form-Item-Label {
-      width: 100%;
-      max-width: 248px;
-      letter-spacing: 0.05em;
-      font-weight: bold;
-      font-size: 18px;
+  }
+
+  dt{
+    text-align: left;
+    margin-left: 100px;
+    width: 200px;
+    float: left;
+  }
+
+  .contact_button{
+    text-align: center;
+  }
+
+
+  .error-message {
+    margin-left: 290px;
+    font-size: 0.8rem;
+    color: #FA5C65;
+
+  }
+
+
+  //-------------------共通部分のボタンのSCSS----------------------------
+
+
+  .send_button, .back_button{
+    font-size: 1rem;
+    color: white;
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .send_button{
+    border: 5px solid black;
+    background-color: black;
+    width: 300px;
+
+  }
+
+  .back_button{
+    border: 5px solid #a9a9a9;
+    background-color: #a9a9a9;
+    width: 300px;
+  }
+
+
+
+  //-------------------確認画面のSCSS----------------------------
+
+  .confirm_contact{
+    margin: 30px 0;
+  }
+
+  .confirm_table, .confirm_contact_title,.confirm_content_item{
+    font-size: 0.9rem;
+    margin: auto;
+    border-collapse: collapse;
+   border:1px solid #333;
+
+    .confirm_contact_title{
+      text-align: left;
+      padding: 15px 10px;
+      width: 200px;
+      background-color: #fff0f5;
     }
-    @media screen and (max-width: 480px) {
-      .Form-Item-Label {
-        max-width: inherit;
-        display: flex;
-        align-items: center;
-        font-size: 15px;
-      }
+
+    .confirm_content_item{
+    padding: 15px;
+      width: 450px;
+
     }
-    .Form-Item-Label.isMsg {
-      margin-top: 8px;
-      margin-bottom: auto;
-    }
-    @media screen and (max-width: 480px) {
-      .Form-Item-Label.isMsg {
-        margin-top: 0;
-      }
-    }
-    .Form-Item-Label-Required {
-      border-radius: 6px;
-      margin-right: 8px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      width: 48px;
-      display: inline-block;
-      text-align: center;
-      background: #ffc219;
-      color: #fff;
-      font-size: 14px;
-    }
-    @media screen and (max-width: 480px) {
-      .Form-Item-Label-Required {
-        border-radius: 4px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        width: 32px;
-        font-size: 10px;
-      }
-    }
-    .Form-Item-Input {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      margin-left: 40px;
-      padding-left: 1em;
-      padding-right: 1em;
-      height: 48px;
-      flex: 1;
-      width: 100%;
-      max-width: 410px;
-      background: #eaedf2;
-      font-size: 18px;
-    }
-    @media screen and (max-width: 480px) {
-      .Form-Item-Input {
-        margin-left: 0;
-        margin-top: 18px;
-        height: 40px;
-        flex: inherit;
-        font-size: 15px;
-      }
-    }
-    .Form-Item-Textarea {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      margin-left: 40px;
-      padding-left: 1em;
-      padding-right: 1em;
-      height: 216px;
-      flex: 1;
-      width: 100%;
-      max-width: 410px;
-      background: #eaedf2;
-      font-size: 18px;
-    }
-    @media screen and (max-width: 480px) {
-      .Form-Item-Textarea {
-        margin-top: 18px;
-        margin-left: 0;
-        height: 200px;
-        flex: inherit;
-        font-size: 15px;
-      }
-    }
-    .Form-Btn {
-      border-radius: 6px;
-      margin-top: 32px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      width: 280px;
-      display: block;
-      letter-spacing: 0.05em;
-      background: #f59700;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    @media screen and (max-width: 480px) {
-      .Form-Btn {
-        margin-top: 24px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        width: 160px;
-        font-size: 16px;
-      }
-    }
+
+  }
+
+
+  //-------------------送信完了画面のSCSS----------------------------
+
+
+  .contact_button_top{
+    margin: 150px 0;
+
+  }
+
+  .send_button_top{
+    margin-left: 287px;
+    font-size: 1rem;
+    color: white;
+    padding: 20px 100px;
+    border: 5px solid black;
+    background-color: black;
+
+  }
+
+
+
+
+
 
 
 }

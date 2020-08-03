@@ -26,7 +26,19 @@ Route::get('index',function(){
     return view('hello.index');
 });
 
+Route::get('/index','HelloController@index');
+
 Route::get('/company','HelloController@detail');
 Route::get('/contact','HelloController@messe');
 Route::get('/recruit','HelloController@recruit');
 Route::get('/news','HelloController@news');
+
+
+//入力ページ
+Route::get('/mail', 'ContactController@index')->name('mail.index');
+
+//確認ページ
+Route::post('/mail/confirm', 'ContactController@confirm')->name('mail.confirm');
+
+//送信完了ページ
+Route::post('/mail/thanks', 'ContactController@send')->name('mail.send');
