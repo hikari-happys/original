@@ -13,7 +13,7 @@ class HelloController extends Controller
     //
   public function index()
   {
-    return view('hello');
+    return view('hello.index');
   }
 
   public function detail()
