@@ -1,0 +1,27 @@
+#footer{
+  background: black;
+  color: white;
+  text-align: center;
+  margin-top: 32px;
+
+  .link_box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    .link_item{
+      padding: 1em 1vw;
+
+      a{
+          color: white;
+          font-size: 0.9rem;
+      }
+    }
+  }
+
+  .copyright{
+    font-size: .7rem;
+    padding: 1rem 0 0;
+  }
+}

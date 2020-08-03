@@ -1,4 +1,6 @@
 @extends('meta.head')
+@extends('meta.footer')
+
 
 <main id="recruit">
 
