@@ -161,6 +161,42 @@
 
 
 
+    .main{
+        width: 680px;
+        margin: 30px auto;
+    }
+
+    .slider{
+        /* スライドを表示させる画面の横幅(≒スライド１枚あたりの横幅) */
+        width: 680px;
+        /* スライドを表示させる画面の縦幅(≒スライド１枚あたりの縦幅) */
+        height: 680px;
+        /* はみ出した要素は隠れるようにする */
+        overflow: hidden;
+    }
+    .slider__container{
+        /* スライドを表示する画面とスライド１枚をぴったり合わせるため設定 */
+        padding: 0;
+        margin: 0;
+
+        /* 子要素でfloatを利用しているため設定 */
+        overflow: hidden;
+
+        list-style: none;
+
+        /* 後ほどJSでleftプロパティを設定するため必要 */
+        position: relative;
+
+    }
+    .slider__item{
+        /* スライド１枚あたりの横幅 */
+        width: 680px;
+        /* スライド１枚あたりの縦幅 */
+        height: 680px;
+        /* スライドを横一列に並べる */
+        float: left;
+    }
+
 
 
 

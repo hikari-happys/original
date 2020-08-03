@@ -169,6 +169,40 @@
   height: 200px;
 }
 
+#top .main {
+  width: 680px;
+  margin: 30px auto;
+}
+
+#top .slider {
+  /* スライドを表示させる画面の横幅(≒スライド１枚あたりの横幅) */
+  width: 680px;
+  /* スライドを表示させる画面の縦幅(≒スライド１枚あたりの縦幅) */
+  height: 680px;
+  /* はみ出した要素は隠れるようにする */
+  overflow: hidden;
+}
+
+#top .slider__container {
+  /* スライドを表示する画面とスライド１枚をぴったり合わせるため設定 */
+  padding: 0;
+  margin: 0;
+  /* 子要素でfloatを利用しているため設定 */
+  overflow: hidden;
+  list-style: none;
+  /* 後ほどJSでleftプロパティを設定するため必要 */
+  position: relative;
+}
+
+#top .slider__item {
+  /* スライド１枚あたりの横幅 */
+  width: 680px;
+  /* スライド１枚あたりの縦幅 */
+  height: 680px;
+  /* スライドを横一列に並べる */
+  float: left;
+}
+
 #company .frame {
   margin: 0 auto;
   max-width: 860px;
@@ -288,12 +322,12 @@
   background-color: #eee;
 }
 
-#contact .frame {
+#mail .frame {
   margin: 0 auto;
   max-width: 860px;
 }
 
-#contact .title {
+#mail .title {
   text-align: center;
   color: #808080;
   font-size: 3rem;
@@ -303,165 +337,165 @@
   margin-bottom: 10px;
 }
 
-#contact .Form {
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
+#mail .recruit_item_title {
+  color: #808080;
+  text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  padding: 7px;
+  margin: 30px 0;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form {
-    margin-top: 40px;
-  }
-}
-
-#contact .Form-Item {
-  border-top: 1px solid #ddd;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  width: 100%;
+#mail .contact_page_title {
+  margin-top: 50px;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item {
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    flex-wrap: wrap;
-  }
+#mail .contact_page_title:before,
+#mail .contact_page_title:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
 }
 
-#contact .Form-Item:nth-child(5) {
-  border-bottom: 1px solid #ddd;
+#mail .contact_page_title:before {
+  margin-right: 1rem;
 }
 
-#contact .Form-Item-Label {
-  width: 100%;
-  max-width: 248px;
-  letter-spacing: 0.05em;
-  font-weight: bold;
-  font-size: 18px;
+#mail .contact_page_title:after {
+  margin-left: 1rem;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item-Label {
-    max-width: inherit;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-  }
+#mail .contact_item {
+  margin-top: 30px;
 }
 
-#contact .Form-Item-Label.isMsg {
-  margin-top: 8px;
-  margin-bottom: auto;
+#mail .contact_item .contact_text {
+  margin-left: 30px;
+  height: 40px;
+  width: 50%;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item-Label.isMsg {
-    margin-top: 0;
-  }
+#mail .contact_item .contact_title_any,
+#mail .contact_item .contact_title_reg {
+  font-size: 1.1rem;
 }
 
-#contact .Form-Item-Label-Required {
-  border-radius: 6px;
-  margin-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 48px;
-  display: inline-block;
+#mail .contact_item .contact_title_any::after {
+  content: "任意";
+  color: #808080;
+  margin-left: 10px;
+  background: white;
+  padding: 0px 5px;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: gray;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+#mail .contact_item .contact_title_reg::after {
+  content: "必須";
+  color: red;
+  margin-left: 10px;
+  background: white;
+  padding: 0px 5px;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+#mail .contact_item .text_area {
+  margin-left: 30px;
+  width: 50%;
+  height: 100px;
+}
+
+#mail dt {
+  text-align: left;
+  margin-left: 100px;
+  width: 200px;
+  float: left;
+}
+
+#mail .contact_button {
   text-align: center;
-  background: #ffc219;
-  color: #fff;
-  font-size: 14px;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item-Label-Required {
-    border-radius: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    width: 32px;
-    font-size: 10px;
-  }
+#mail .error-message {
+  margin-left: 290px;
+  font-size: 0.8rem;
+  color: #FA5C65;
 }
 
-#contact .Form-Item-Input {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 48px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
+#mail .send_button,
+#mail .back_button {
+  font-size: 1rem;
+  color: white;
+  width: 50%;
+  margin-top: 20px;
+  padding: 20px;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item-Input {
-    margin-left: 0;
-    margin-top: 18px;
-    height: 40px;
-    flex: inherit;
-    font-size: 15px;
-  }
+#mail .send_button {
+  border: 5px solid black;
+  background-color: black;
+  width: 300px;
 }
 
-#contact .Form-Item-Textarea {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-left: 40px;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 216px;
-  flex: 1;
-  width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
-  font-size: 18px;
+#mail .back_button {
+  border: 5px solid #a9a9a9;
+  background-color: #a9a9a9;
+  width: 300px;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Item-Textarea {
-    margin-top: 18px;
-    margin-left: 0;
-    height: 200px;
-    flex: inherit;
-    font-size: 15px;
-  }
+#mail .confirm_contact {
+  margin: 30px 0;
 }
 
-#contact .Form-Btn {
-  border-radius: 6px;
-  margin-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
-  display: block;
-  letter-spacing: 0.05em;
-  background: #f59700;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
+#mail .confirm_table,
+#mail .confirm_contact_title,
+#mail .confirm_content_item {
+  font-size: 0.9rem;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #333;
 }
 
-@media screen and (max-width: 480px) {
-  #contact .Form-Btn {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 160px;
-    font-size: 16px;
-  }
+#mail .confirm_table .confirm_contact_title,
+#mail .confirm_contact_title .confirm_contact_title,
+#mail .confirm_content_item .confirm_contact_title {
+  text-align: left;
+  padding: 15px 10px;
+  width: 200px;
+  background-color: #fff0f5;
+}
+
+#mail .confirm_table .confirm_content_item,
+#mail .confirm_contact_title .confirm_content_item,
+#mail .confirm_content_item .confirm_content_item {
+  padding: 15px;
+  width: 450px;
+}
+
+#mail .contact_button_top {
+  margin: 150px 0;
+}
+
+#mail .send_button_top {
+  margin-left: 287px;
+  font-size: 1rem;
+  color: white;
+  padding: 20px 100px;
+  border: 5px solid black;
+  background-color: black;
 }
 
 #recruit {
@@ -663,5 +697,33 @@
 .header_navitem {
   font-size: 16px;
   color: #fff;
+}
+
+#footer {
+  background: black;
+  color: white;
+  text-align: center;
+  margin-top: 32px;
+}
+
+#footer .link_box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#footer .link_box .link_item {
+  padding: 1em 1vw;
+}
+
+#footer .link_box .link_item a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+#footer .copyright {
+  font-size: 0.7rem;
+  padding: 1rem 0 0;
 }
 

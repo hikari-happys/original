@@ -1,4 +1,5 @@
 @extends('meta.head')
+@extends('meta.footer')
 
 
 <main id="top">
@@ -77,7 +78,30 @@
         </li>
     </ul>
 
-</div>
+
+
+
+
+
+    <div class="main">
+            <!--スライドを表示させる画面-->
+           <div class="slider">
+                <!--  横に並べた複数のスライドを格納する用コンテナ  -->
+               <ul class="slider__container">
+                    <!--  各スライド -->
+                   <img src="{!! asset('/img/recommend_01.jpg') !!}" alt="" class="slider__item slider__item1">
+                   <img src="{!! asset('/img/recommend_02.jpg') !!}" alt="" class="slider__item slider__item1">
+                   <img src="{!! asset('/img/recommend_03.jpg') !!}" alt="" class="slider__item slider__item1">
+                   <img src="{!! asset('/img/recommend_04.jpg') !!}" alt="" class="slider__item slider__item1">
+                   <img src="{!! asset('/img/recommend_05.jpg') !!}" alt="" class="slider__item slider__item1">
+               </ul>
+           </div>
+       </div>
+
+    </div>
+
+
+
 
 
 </main>
